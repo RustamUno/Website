@@ -1,0 +1,455 @@
+@import 'vars';
+@import 'mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    height: 735px;
+    background-image: url(../img/background/topback.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    height: 76px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid $color-text;
+
+    .header_input {
+        width: 288px;
+        height: 41px;
+        border: 1px solid $color-text;
+        border-radius: 20px;
+        background-color: transparent;
+        outline: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size;
+        line-height: 20px;
+        color: $color-text;
+        padding-left: 32px;
+        padding-right: 32px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            color: $color-text;
+        }
+    }
+
+    .navigate {
+        display: flex;
+        gap: 32px;
+        font-size: $font-size;
+        line-height: 20px;
+
+        .nav {
+            transition: all 2s;
+            border-bottom: transparent;
+
+            .link_one {
+                font-style: normal;
+                font-weight: normal;
+                font-size: $font-size;
+                line-height: 20px;
+                color: $color-text;
+            }
+
+            &:hover {
+                transform: scale(1.25);
+                border-bottom: 1px solid $color-text;
+            }
+        }
+    }
+
+    .menu_mobile {
+        display: none;
+    }
+}
+
+.title {
+    margin: 64px 0 16px 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    color: $color-text;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    max-width: 792px;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-text;
+    margin-bottom: 16px;
+}
+
+
+.link_catalog {
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: $color-text;
+    transition: all 1s;
+
+    &:hover {
+        color: $color-black-text;
+        text-decoration-line: none;
+    }
+}
+
+
+/* Страница каталога */
+
+.top_catalog {
+    background-image: url(../img/background/backcatalog.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .title_catalog {
+        margin: 64px 0 16px 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        color: $color-text;
+        margin-top: 127px;
+    }
+}
+
+.product_path {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .show_way {
+        display: flex;
+
+        .way {
+            padding-left: 10px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-size;
+            line-height: 24px;
+            text-decoration-line: none;
+            color: $color-black-text;
+
+            &:hover {
+                color: $color-grey;
+                text-decoration-line: underline;
+            }
+        }
+    }
+
+    .order {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $color-border;
+        border-radius: 20px;
+        font-size: $font-size;
+        padding-left: 14px;
+        padding-right: 75px;
+        padding-top: 11px;
+        padding-bottom: 10px;
+        appearance: none;
+        background: url('../img/rest/arrow.svg') no-repeat right;
+        background-position-x: calc(100% - 8px)
+    }
+}
+
+/* Страница каталога */
+
+.top_for {
+    padding-top: 64px;
+
+    .category_name {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $color-black-text;
+    }
+}
+
+.for {
+    margin-top: 32px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+
+    &_item {
+        height: 415px;
+        grid-column: span 4;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 41px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-text;
+    }
+
+    &_item:nth-of-type(1) {
+        background-image: url(../img/for/rest.jpg);
+        grid-column: span 6;
+    }
+
+    &_item:nth-of-type(2) {
+        background-image: url(../img/for/job.jpg);
+        grid-column: span 6;
+    }
+
+    &_item:nth-of-type(3) {
+        background-image: url(../img/for/kitchen.jpg);
+    }
+
+    &_item:nth-of-type(4) {
+        background-image: url(../img/for/bathroom.jpg);
+    }
+
+    &_item:nth-of-type(5) {
+        background-image: url(../img/for/playroom.jpg);
+    }
+}
+
+.product {
+    margin-top: 32px;
+    display: flex;
+    column-gap: 32px;
+    row-gap: 32px;
+    flex-wrap: wrap;
+
+    &_content {
+        width: 378px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        padding: 10px;
+
+        &:hover {
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 0 7px $color-border;
+            transform: scale(1.05);
+        }
+
+        .image_special {
+            width: 100%;
+        }
+
+        .subject {
+            @include subject();
+
+            &:hover {
+                color: $color-grey;
+            }
+        }
+
+        .description {
+            @include description();
+        }
+    }
+}
+
+
+
+.category_choice {
+    @include choice();
+}
+
+.product_box_price {
+    display: flex;
+    gap: 32px;
+}
+
+.price_one {
+    @include price();
+}
+
+.price_sale {
+    @include sale();
+}
+
+.link_box {
+    height: 58px;
+    padding-top: 39px;
+    padding-bottom: 96px;
+
+
+    .catalog_link {
+        color: $color-black-text;
+        text-decoration-line: underline;
+
+        &:hover {
+            text-shadow: 0 0 7px $color-border;
+            transition: all 3s;
+            text-decoration-line: none;
+            color: $color-grey;
+        }
+    }
+}
+
+.footer {
+    background: $color-background;
+    padding-top: 32px;
+    border-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        width: 792px;
+        flex-wrap: wrap;
+
+        .footer_info {
+            display: flex;
+            gap: 129px;
+
+            .footer_item {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .footer_option {
+                    color: $color-black-text;
+                }
+
+                .footer_menu {
+                    color: $color-grey;
+                    transition: all (0.5s);
+
+                    &:hover {
+                        transform: scale(1.15);
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer_report {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    .footer_contact {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-grey;
+    }
+
+    .footer_icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .icon_animation {
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: $color-background;
+                box-shadow: 0 0 10px $color-black-text;
+                border-radius: 20px;
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
+.footer_form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .footer_text {
+        font-size: 12px;
+        margin-bottom: 14px;
+        gap: 16px;
+    }
+
+    .link_email {
+        display: flex;
+        flex-direction: column;
+        background: $color-text;
+        border: 1px solid $color-border;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 268px;
+        height: 46px;
+        font-size: 15px;
+        line-height: 18px;
+        padding-left: 25px;
+        padding-right: 37px;
+        padding-top: 12px;
+        padding-bottom: 14px;
+        gap: 12px;
+
+        &::placeholder {
+            color: $color-border;
+        }
+    }
+}
+
+.button {
+    background: #ded7d7;
+    border: 1px solid $color-text;
+    box-sizing: border-box;
+    width: 268px;
+    height: 46px;
+    border-radius: 20px;
+    padding: 13px 85px 13px 85px;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-black-text;
+    transition: 0.3s;
+    margin-bottom: 40px;
+
+    &:hover {
+        padding: 10px;
+        font-size: 18px;
+        box-shadow: 0 0 7px $color-border;
+        transform: scale(1.05);
+        background: $color-black-text;
+        color: $color-other;
+    }
+}
+
+
+@import 'cart';
+@import 'tablet';
+@import 'mobile';

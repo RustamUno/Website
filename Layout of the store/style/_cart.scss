@@ -1,0 +1,215 @@
+.top_cart {
+    height: 400px;
+    background-image: url(../img/background/backcart.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .title_cart {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+        margin-top: 172px;
+        color: $color-text;
+    }
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+
+    &_content {
+        grid-column: span 8;
+    }
+
+    &_name-box {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+    }
+
+    &_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        border-top: 0.5px solid $color-line-cart;
+    }
+
+    &_left {
+        display: flex;
+        gap: 32px;
+    }
+
+    .image {
+        height: 173px;
+        width: 173px;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 276px;
+    }
+
+    &_name-product {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &_description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-grey;
+    }
+
+    &_price {
+        font-weight: 500;
+        font-size: $font-size;
+        line-height: 20px;
+    }
+
+    .cart_link-box {
+        display: flex;
+
+        .consist {
+            transition: all 2s;
+            text-decoration-line: underline;
+
+            .cart_choice {
+                font-weight: 400;
+                padding-right: 30px;
+                font-size: 14px;
+                color: $color-black-text;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                color: $color-grey;
+                text-decoration-line: none;
+            }
+        }
+    }
+
+    &_input {
+        border: 1px solid $color-input;
+        width: 71px;
+        height: 51px;
+        padding-left: 20px;
+        border-radius: 6px;
+        outline: none;
+        background: $color-input;
+        box-sizing: border-box;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        height: 556px;
+        grid-column: span 4;
+        height: 556px;
+        background: $color-input;
+    }
+
+    .ordering {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        padding-top: 42px;
+    }
+
+    &_form-box {
+        display: flex;
+        flex-direction: column;
+        padding-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &_data {
+        appearance: none;
+        width: 288px;
+        margin-bottom: 41px;
+        background: transparent;
+        text-align: left;
+        margin-left: 27px;
+        margin-right: 64px;
+        outline: none;
+        border: 1px solid transparent;
+        border-bottom: 1px solid $color-line-cart;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-black-text;
+        }
+    }
+
+    &_total {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    &_button {
+        margin-top: 20px;
+        background: transparent;
+        border: 1px solid $color-black-text;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 85px;
+        padding-right: 85px;
+        font-size: 15px;
+        line-height: 18px;
+        color: $color-black-text;
+        transition: all 0.5s;
+    }
+
+    &_button:hover {
+        box-shadow: 0 0 7px $color-border;
+        transform: scale(1.08);
+        color: $color-text;
+        background: $color-black-text;
+    }
+
+}
+
+.cart_changes {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+
+
+    .changes_button {
+        text-align: center;
+        margin-right: 10px;
+        background: transparent;
+        border: 1px solid $color-black-text;
+        box-sizing: border-box;
+        border-radius: 40px;
+        padding: 5px 30px 5px 30px;
+        font-size: 14px;
+        line-height: 17px;
+        transition: all 0.5s;
+    }
+
+    .changes_button:hover {
+        box-shadow: 0 0 15px;
+        transform: scale(1.07);
+        color: $color-text;
+        background: $color-black-text;
+    }
+}

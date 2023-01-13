@@ -1,0 +1,40 @@
+@mixin subject {
+    margin-top: 10px;
+    margin-bottom: 9px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-black-text;
+}
+
+@mixin description {
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-grey;
+}
+
+@mixin choice {
+    padding-top: 73px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: $color-black-text;
+}
+
+@mixin price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-black-text;
+}
+
+@mixin sale {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: line-through;
+    color: $color-grey;
+}
